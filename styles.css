@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    font-family: "Lato", sans-serif;
+}
+.rounds {
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 40px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.rounds h2 {
+    font-size: 40px;
+    margin-top: 0;
+}
+.rounds button {
+    font-size: 18px;
+    background-color: white;
+    border-color: black;
+    border-radius: 5%;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 10px;
+    transform-origin: center;
+}
+.rounds button:hover {
+    transform: scale(1.03);
+}
+h1 {
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    padding: 30px;
+    font-size: 45px;
+}
+.game {
+    margin-top: 30px;
+}
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.score {
+    display: inline-block;
+    text-align: center;
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 50px;
+    padding: 10px 25px;
+}
+#user-score {
+    margin-right: 100px;
+    position: relative;
+}
+#user-label {
+    position: absolute;
+    top: 90px;
+    right: 23px;
+    font-size: 20px;
+}
+#comp-score {
+    position: relative;
+}
+#comp-label {
+    position: absolute;
+    top: 90px;
+    right: 13px;
+    font-size: 20px;
+}
+.outcome-message {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 40px;
+}
+.choices {
+    display: grid;
+    grid-template-columns: 200px 200px 250px;
+    justify-content: center;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 180px;
+    padding-top: 20px;
+}
+img {
+    width: 200px;
+    height: 200px;
+    transform-origin: center;
+    cursor: pointer;
+}
+#scissors {
+    width: 250px;
+    height: 195px;
+    padding-left: 30px;
+}
+/* .bottom-message {
+    text-align: center;
+    font-size: 25px;
+    margin-top: -5px;
+} */
+
+img:hover {
+    transform: scale(1.03);
+}
+#reset {
+    text-align: center;
+    margin: auto;
+    display: block;
+    background-color: white;
+    font-size: 24px;
+    margin-top: 40px;
+    cursor: pointer;
+    border-radius: 5%;
+    padding: 5px 10px;
+}
+#reset:hover {
+    background-color: #D3D3D3;
+}
+.gameEnds-message {
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    height: fit-content;
+    width: 400px;
+    padding: 40px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+}
+.gameEnds-message h3 {
+    margin: 0px;
+    font-size: 30px;
+}
+.gameEnds-message p {
+    margin: 25px 0px 30px 0px;
+    font-size: 20px;
+}
+.gameEnds-message button {
+    background-color: white;
+    border-radius: 5%;
+    font-size: 20px;
+    padding: 8px 13px;
+    cursor: pointer;
+    transform-origin: center;
+}
+.gameEnds-message button:hover {
+    transform: scale(1.03);
+}

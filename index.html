@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="rounds">
+        <h2>Choose the number of rounds</h2>
+        <button id="freeplay">Free Play</button>
+        <button id="5rounds">5 Rounds</button>
+        <button id="10rounds">10 Rounds</button>
+        <button id="15rounds">15 Rounds</button>
+    </div>
+    <div class="gameEnds-message">
+        <h3 id="who-won">You Win!</h3>
+        <p id="final-scores">You: 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Comp: 0</p>
+        <button id="game-end-reset">Reset</button>
+    </div>
+    <h1>Rock Paper Scissors Game!</h1>
+    <div class="game">
+        <div class="score-board">
+            <div class="score" id="user-score">
+                0
+                <div id="user-label">You</div>
+            </div>
+            <div class="score" id="comp-score">
+                0
+                <div id="comp-label">Comp</div>
+            </div>
+        </div>
+        <h2 class="outcome-message">Scissors beats Paper. You win!</h2>
+        <div class="choices">
+            <img id="rock" src="images/rock.png" alt="">
+            <img id="paper" src="images/paper.png" alt="">
+            <img id="scissors" src="images/scissors.png" alt="">
+        </div>
+        <!-- <h3 class="bottom-message">Make your move.</h3> -->
+        <button id="reset">Reset</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
