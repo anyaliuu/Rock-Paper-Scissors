@@ -16,6 +16,7 @@
     right: 0;
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 1;
 }
 .rounds h2 {
     font-size: 40px;
@@ -40,6 +41,7 @@ h1 {
     font-style: normal;
     padding: 30px;
     font-size: 45px;
+    color: grey;
 }
 .game {
     margin-top: 30px;
@@ -52,7 +54,7 @@ h1 {
 .score {
     display: inline-block;
     text-align: center;
-    border: 2px solid black;
+    border: 2px solid grey;
     padding: 20px;
     font-size: 50px;
     padding: 10px 25px;
@@ -60,26 +62,31 @@ h1 {
 #user-score {
     margin-right: 100px;
     position: relative;
+    color: grey;
 }
 #user-label {
     position: absolute;
     top: 90px;
     right: 23px;
     font-size: 20px;
+    color: grey;
 }
 #comp-score {
     position: relative;
+    color: grey;
 }
 #comp-label {
     position: absolute;
     top: 90px;
     right: 13px;
     font-size: 20px;
+    color: grey;
 }
 .outcome-message {
     text-align: center;
     margin-top: 60px;
     font-size: 40px;
+    color: grey;
 }
 .choices {
     display: grid;
@@ -95,6 +102,7 @@ img {
     height: 200px;
     transform-origin: center;
     cursor: pointer;
+    opacity: .3;
 }
 #scissors {
     width: 250px;
@@ -119,7 +127,9 @@ img:hover {
     margin-top: 40px;
     cursor: pointer;
     border-radius: 5%;
+    border-color: grey;
     padding: 5px 10px;
+    color: grey;
 }
 #reset:hover {
     background-color: #D3D3D3;
@@ -138,6 +148,7 @@ img:hover {
     margin: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: none;
+    z-index: 1;
 }
 .gameEnds-message h3 {
     margin: 0px;
