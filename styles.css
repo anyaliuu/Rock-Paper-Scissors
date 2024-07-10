@@ -42,6 +42,7 @@ h1 {
     padding: 30px;
     font-size: 45px;
     color: grey;
+    margin-top: 10px;
 }
 .game {
     margin-top: 30px;
@@ -109,11 +110,6 @@ img {
     height: 195px;
     padding-left: 30px;
 }
-/* .bottom-message {
-    text-align: center;
-    font-size: 25px;
-    margin-top: -5px;
-} */
 
 img:hover {
     transform: scale(1.03);

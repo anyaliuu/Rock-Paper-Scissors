@@ -23,12 +23,77 @@ const paper_img = document.getElementById("paper");
 const scissors_img = document.getElementById("scissors");
 const outcomeMessage_h2 = document.querySelector(".outcome-message");
 
+pauseStyles();
+
 freePlay_btn.addEventListener("click", startNewGame);
 fiveRounds_btn.addEventListener("click", () => startNewGame(5));
 tenRounds_btn.addEventListener("click", () => startNewGame(10));
 fifteenRounds_btn.addEventListener("click", () => startNewGame(15));
 reset_btn.addEventListener("click", reset);
 gameEndReset.addEventListener("click", reset);
+
+
+function imgHover() {
+    var css = 'img:hover{ transform: scale(1.03); }';
+    var style = document.createElement('style');
+    
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    
+    document.getElementsByTagName('head')[0].appendChild(style);
+
+    rock_img.style.cursor = "pointer";
+    paper_img.style.cursor = "pointer";
+    scissors_img.style.cursor = "pointer";
+}
+
+function imgNoHover() {
+    var css = 'img:hover{ transform: scale(1); }';
+    var style = document.createElement('style');
+    
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    
+    document.getElementsByTagName('head')[0].appendChild(style);
+    
+    rock_img.style.cursor = "auto";
+    paper_img.style.cursor = "auto";
+    scissors_img.style.cursor = "auto";
+}
+
+function resetNoHover() {
+    var css = '#reset:hover{ background-color: #FFFFFF }';
+    var style = document.createElement('style');
+    
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    
+    document.getElementsByTagName('head')[0].appendChild(style);
+}
+
+function resetHover() {
+    var css = '#reset:hover{ background-color: #D3D3D3 }';
+    var style = document.createElement('style');
+    
+    if (style.styleSheet) {
+        style.styleSheet.cssText = css;
+    } else {
+        style.appendChild(document.createTextNode(css));
+    }
+    
+    document.getElementsByTagName('head')[0].appendChild(style);
+
+    reset_btn.style.cursor = "pointer";
+}
 
 function playStyles() {
     userScore_div.style.color = "black";
@@ -39,11 +104,14 @@ function playStyles() {
     paper_img.style.opacity = 1;
     scissors_img.style.opacity = 1;
     outcomeMessage_h2.style.color = "black";
-    title.style.color = "black";
+    title.style.color = "#1E90FF";
     reset_btn.style.color = "black";
     reset_btn.style.borderColor = "black";
     userLabel_div.style.color = "black";
     compLabel_div.style.color = "black";
+    reset_btn.disabled = false;
+    resetHover();
+    imgHover();
 }
 
 function pauseStyles() {
@@ -58,9 +126,12 @@ function pauseStyles() {
     title.style.color = "grey";
     reset_btn.style.color = "grey";
     reset_btn.style.borderColor = "grey";
+    reset_btn.style.cursor = "auto"
     userLabel_div.style.color = "grey";
     compLabel_div.style.color = "grey";
-
+    resetNoHover();
+    imgNoHover();
+    reset_btn.disabled = true;
 }
 
 function startNewGame(numRounds) {
